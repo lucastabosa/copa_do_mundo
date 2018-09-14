@@ -1,4 +1,4 @@
-<form method="POST" action ="adm.php">
+                            <form method="POST" action ="adm.php">
                             
                                 <!-- CAMPO first name -->    
                                 <div class="form-group">

@@ -37,19 +37,17 @@
 
                <div class="col-9">
                     <div class="tab-content" id="v-pills-tabContent">
+                        
                         <div class="tab-pane fade show active" id="v-pills-Pais" role="tabpanel" aria-labelledby="v-pills-Pais-tab">
-                            
                            <?php
                                 include "adm_pais.php";
                             ?>
-                            
                         </div>
+                        
                         <div class="tab-pane fade" id="v-pills-Selecao" role="tabpanel" aria-labelledby="v-pills-Selecao-tab">
-                            
                             <?php
                                 include "adm_selecao.php";
                             ?>
-                        
                         </div>
                           
                         <div class="tab-pane fade" id="v-pills-Jogadores" role="tabpanel" aria-labelledby="v-pills-Jogadores-tab">    
@@ -66,7 +64,7 @@
                         
                         <div class="tab-pane fade" id="v-pills-ComidasTipicas" role="tabpanel" aria-labelledby="v-pills-ComidasTipicas-tab">
                             <?php
-                                include "adm_comidatipica.php";
+                                include "adm_comidatipica.php";    
                             ?>
                         </div>
                         
