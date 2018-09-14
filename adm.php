@@ -39,258 +39,41 @@
                     <div class="tab-content" id="v-pills-tabContent">
                         <div class="tab-pane fade show active" id="v-pills-Pais" role="tabpanel" aria-labelledby="v-pills-Pais-tab">
                             
-                            <form method="POST" action ="adm.php">
-          
-                                <!-- CAMPO first name -->    
-                                <div class="form-group">
-                                    <label for="first_name">Primeiro nome:</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" placeholder="Digite seu primeiro nome">
-                                    <small id="firstNameHelp" class="form-text text-muted">Preencha apenas com primeiro nome.</small>
-                                  </div>
-
-                                <!-- CAMPO last name -->    
-                                <div class="form-group">
-                                    <label for="last_name">Último nome:</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" aria-describedby="lastNameHelp" placeholder="Digite seu último nome">
-                                    <small id="lastNameHelp" class="form-text text-muted">Preencha apenas com último nome.</small>
-                                  </div>
-
-                                <!-- CAMPO EMAIL -->    
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite email">
-                                    <small id="emailHelp" class="form-text text-muted">Não compartilhe e-mail com ninguém.</small>
-                                  </div>
-
-
-
-                                    <!-- SENHA -->
-                                  <div class="form-group">
-                                    <label for="password">Senha:</label>
-                                    <input type="password" name="password"class="form-control col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" id="password" placeholder="Senha">
-                                  </div>
-
-
-                                  <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                  </div>
-
-                                  <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>
-                            </form>
+                           <?php
+                                include "adm_pais.php";
+                            ?>
                             
                         </div>
                         <div class="tab-pane fade" id="v-pills-Selecao" role="tabpanel" aria-labelledby="v-pills-Selecao-tab">
                             
-                            <form method="POST" action ="adm.php">
-                            
-                                <!-- CAMPO first name -->    
-                                <div class="form-group">
-                                    <label for="first_name">Primeiro nome:</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" placeholder="Digite seu primeiro nome">
-                                    <small id="firstNameHelp" class="form-text text-muted">Preencha apenas com primeiro nome.</small>
-                                </div>
-
-                                <!-- CAMPO last name -->    
-                                <div class="form-group">
-                                    <label for="last_name">Último nome:</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" aria-describedby="lastNameHelp" placeholder="Digite seu último nome">
-                                    <small id="lastNameHelp" class="form-text text-muted">Preencha apenas com último nome.</small>
-                                </div>
-
-                                <!-- CAMPO EMAIL -->    
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite email">
-                                    <small id="emailHelp" class="form-text text-muted">Não compartilhe e-mail com ninguém.</small>
-                                </div>
-
-
-
-                                    <!-- SENHA -->
-                                <div class="form-group">
-                                    <label for="password">Senha:</label>
-                                    <input type="password" name="password"class="form-control col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" id="password" placeholder="Senha">
-                                </div>
-
-
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                </div>
-
-                                  <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>
-                            </form>
-                             
+                            <?php
+                                include "adm_selecao.php";
+                            ?>
                         
                         </div>
                           
-                        <div class="tab-pane fade" id="v-pills-Jogadores" role="tabpanel" aria-labelledby="v-pills-Jogadores-tab">
-                            <form method="POST" action ="adm.php">
-                            
-                                <!-- CAMPO first name -->    
-                                <div class="form-group">
-                                    <label for="first_name">Primeiro nome:</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" placeholder="Digite seu primeiro nome">
-                                    <small id="firstNameHelp" class="form-text text-muted">Preencha apenas com primeiro nome.</small>
-                                </div>
-
-                                <!-- CAMPO last name -->    
-                                <div class="form-group">
-                                    <label for="last_name">Último nome:</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" aria-describedby="lastNameHelp" placeholder="Digite seu último nome">
-                                    <small id="lastNameHelp" class="form-text text-muted">Preencha apenas com último nome.</small>
-                                </div>
-
-                                <!-- CAMPO EMAIL -->    
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite email">
-                                    <small id="emailHelp" class="form-text text-muted">Não compartilhe e-mail com ninguém.</small>
-                                </div>
-
-
-
-                                    <!-- SENHA -->
-                                <div class="form-group">
-                                    <label for="password">Senha:</label>
-                                    <input type="password" name="password"class="form-control col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" id="password" placeholder="Senha">
-                                </div>
-
-
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                </div>
-
-                                  <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>
-                            </form>
-                        </div>
-                          
+                        <div class="tab-pane fade" id="v-pills-Jogadores" role="tabpanel" aria-labelledby="v-pills-Jogadores-tab">    
+                            <?php         
+                                include "adm_jogadores.php";
+                            ?>  
+                        </div>   
                         
-                        <div class="tab-pane fade" id="v-pills-Curiosidades" role="tabpanel" aria-labelledby="v-pills-Curiosidades-tab">
-                            <form method="POST" action ="adm.php">
-                            
-                                <!-- CAMPO first name -->    
-                                <div class="form-group">
-                                    <label for="first_name">Primeiro nome:</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" placeholder="Digite seu primeiro nome">
-                                    <small id="firstNameHelp" class="form-text text-muted">Preencha apenas com primeiro nome.</small>
-                                </div>
-
-                                <!-- CAMPO last name -->    
-                                <div class="form-group">
-                                    <label for="last_name">Último nome:</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" aria-describedby="lastNameHelp" placeholder="Digite seu último nome">
-                                    <small id="lastNameHelp" class="form-text text-muted">Preencha apenas com último nome.</small>
-                                </div>
-
-                                <!-- CAMPO EMAIL -->    
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite email">
-                                    <small id="emailHelp" class="form-text text-muted">Não compartilhe e-mail com ninguém.</small>
-                                </div>
-
-
-
-                                    <!-- SENHA -->
-                                <div class="form-group">
-                                    <label for="password">Senha:</label>
-                                    <input type="password" name="password"class="form-control col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" id="password" placeholder="Senha">
-                                </div>
-
-
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                </div>
-
-                                  <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>
-                            </form>
+                        <div class="tab-pane fade" id="v-pills-Curiosidades" role="tabpanel" aria-labelledby="v-pills-Curiosidades-tab">    
+                            <?php
+                                include "adm_curiosidades.php";
+                            ?>  
                         </div>
                         
                         <div class="tab-pane fade" id="v-pills-ComidasTipicas" role="tabpanel" aria-labelledby="v-pills-ComidasTipicas-tab">
-                            <form method="POST" action ="adm.php">
-                            
-                                <!-- CAMPO first name -->    
-                                <div class="form-group">
-                                    <label for="first_name">Primeiro nome:</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" placeholder="Digite seu primeiro nome">
-                                    <small id="firstNameHelp" class="form-text text-muted">Preencha apenas com primeiro nome.</small>
-                                </div>
-
-                                <!-- CAMPO last name -->    
-                                <div class="form-group">
-                                    <label for="last_name">Último nome:</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" aria-describedby="lastNameHelp" placeholder="Digite seu último nome">
-                                    <small id="lastNameHelp" class="form-text text-muted">Preencha apenas com último nome.</small>
-                                </div>
-
-                                <!-- CAMPO EMAIL -->    
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite email">
-                                    <small id="emailHelp" class="form-text text-muted">Não compartilhe e-mail com ninguém.</small>
-                                </div>
-
-
-
-                                    <!-- SENHA -->
-                                <div class="form-group">
-                                    <label for="password">Senha:</label>
-                                    <input type="password" name="password"class="form-control col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" id="password" placeholder="Senha">
-                                </div>
-
-
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                </div>
-
-                                  <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>
-                            </form>
+                            <?php
+                                include "adm_comidatipica.php";
+                            ?>
                         </div>
+                        
                         <div class="tab-pane fade" id="v-pills-Videos" role="tabpanel" aria-labelledby="v-pills-Videos-tab">
-                            <form method="POST" action ="adm.php">
-                            
-                                <!-- CAMPO first name -->    
-                                <div class="form-group">
-                                    <label for="first_name">Primeiro nome:</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" placeholder="Digite seu primeiro nome">
-                                    <small id="firstNameHelp" class="form-text text-muted">Preencha apenas com primeiro nome.</small>
-                                </div>
-
-                                <!-- CAMPO last name -->    
-                                <div class="form-group">
-                                    <label for="last_name">Último nome:</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" aria-describedby="lastNameHelp" placeholder="Digite seu último nome">
-                                    <small id="lastNameHelp" class="form-text text-muted">Preencha apenas com último nome.</small>
-                                </div>
-
-                                <!-- CAMPO EMAIL -->    
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite email">
-                                    <small id="emailHelp" class="form-text text-muted">Não compartilhe e-mail com ninguém.</small>
-                                </div>
-
-
-
-                                    <!-- SENHA -->
-                                <div class="form-group">
-                                    <label for="password">Senha:</label>
-                                    <input type="password" name="password"class="form-control col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3" id="password" placeholder="Senha">
-                                </div>
-
-
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                </div>
-
-                                  <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>
-                            </form>
+                            <?php
+                                include "adm_videos.php";
+                            ?>
                         </div>
                         
                     </div>
