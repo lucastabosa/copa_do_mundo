@@ -1,6 +1,6 @@
                            <form method="POST" action ="adm.php">
                             
-                                <!-- CAMPO first name -->    
+                                <!-- CAMPO VIDEO -->    
                                 <div class="form-group">
                                     <label for="first_name">Primeiro nome:</label>
                                     <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" placeholder="Digite seu primeiro nome">
