@@ -23,7 +23,11 @@
                             </form>
 
 
+<<<<<<< HEAD
                                 <table class="table">
+=======
+                            <table class="table">
+>>>>>>> dc3bcec86c93e2f97f0c3c557d92e358db1a4d5f
                               <thead class="thead-dark">
                                 <tr>
                                   <th scope="col">#</th>
