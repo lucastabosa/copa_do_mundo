@@ -1,0 +1,2 @@
+image=:image WHERE id = :id
+$valores[':image'] = $user->getImage();
