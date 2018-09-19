@@ -1,4 +1,29 @@
                            <form method="POST" action ="adm.php">
+                               
+                               
+                               <!-- CAMPO SELECAO -->    
+                                <div class="form-group">
+                                    <label for="titulo">Seleção:</label>
+                                    
+                                    <div class="input-group mb-3">
+                                      
+                                      <select class="custom-select" name="id_selecao" id="id_selecaoHelp">
+                                        <?php  
+                                          $listadeselecao = array();
+                                          $listadeselecao[0] = array('id'=>1, 'nome'=>'Brasil');
+                                          $listadeselecao[1] = array('id'=>2, 'nome'=>'França');
+                                          
+                                          
+                                          foreach( $listadeselecao    as   $ls   ){     ?>
+                                          
+                                            <option value="<?php echo $ls['id']?>">    <?php echo $ls['nome']?></option>
+                                          
+                                         <?php  } ?> 
+                                      </select>
+                                    </div>
+                                    
+                                    <small id="id_selecaoHelp" class="form-text text-muted">Selecione uma seleção.</small>
+                                </div>
                             
                                 <!-- CAMPO VIDEO -->    
                                 <div class="form-group">

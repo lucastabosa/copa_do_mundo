@@ -6,6 +6,30 @@
                                     <input type="text" class="form-control" id="jogador" name="jogador" aria-describedby="jogadorHelp" placeholder="Digite nome do jogador">
                                     <small id="jogadorHelp" class="form-text text-muted">Preencha apenas com o nome do jogador.</small>
                                 </div>
+                                
+                                <!-- CAMPO SELECAO -->    
+                                <div class="form-group">
+                                    <label for="titulo">Seleção:</label>
+                                    
+                                    <div class="input-group mb-3">
+                                      
+                                      <select class="custom-select" name="id_selecao" id="id_selecaoHelp">
+                                        <?php  
+                                          $listadeselecao = array();
+                                          $listadeselecao[0] = array('id'=>1, 'nome'=>'Brasil');
+                                          $listadeselecao[1] = array('id'=>2, 'nome'=>'França');
+                                          
+                                          
+                                          foreach( $listadeselecao    as   $ls   ){     ?>
+                                          
+                                            <option value="<?php echo $lp['id']?>">    <?php echo $ls['nome']?></option>
+                                          
+                                         <?php  } ?> 
+                                      </select>
+                                    </div>
+                                    
+                                    <small id="id_selecaoHelp" class="form-text text-muted">Selecione uma seleção.</small>
+                                </div>
 
                                 <!-- CAMPO IMAGEM -->    
                                 <div class="form-group">
@@ -45,19 +69,36 @@
                                   <th scope="col">Imagem</th>
                                   <th scope="col">Idade</th>
                                   <th scope="col">Descrição</th>
-                                <th scope="col">Ação</th>
+                                <th scope="col">Ação</th> 
                                 </tr>
                               </thead>
                               <tbody>
+                                  
+                            
+                                  
+                            <?php
+                              foreach($listadejogadores as $lj){              
+                            ?>
+                                  
                                 <tr>
-                                  <th scope="row">1</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                   <td></td>
+                                  <th scope="row">
+                                      <?php echo $lj['id']; ?>
+                                  </th>
+                                    
+                                  <td><?php echo $lj['nome']; ?></td>
+                                
+                                  <td><?php echo $lj['imagem']; ?></td>
+                                    
+                                  <td><?php echo $lj['idade']; ?></td>
+                                    
+                                  <td><?php echo $lj['descricao'];?></td>
+                                    
                                     <td><button type="button" class="btn btn-info">Deletar</button>
                                         <button type="button" class="btn btn-info">Editar</button></td>
                                   
                                 </tr>
+                                  <?php
+                                    }
+                                  ?>
                               </tbody>
                             </table>
