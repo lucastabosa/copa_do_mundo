@@ -2,30 +2,30 @@
                             
                                 <!-- CAMPO JOGADORES -->    
                                 <div class="form-group">
-                                    <label for="first_name">Nome do jogador:</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" placeholder="Digite nome do jogador">
-                                    <small id="firstNameHelp" class="form-text text-muted">Preencha apenas com o nome do jogador.</small>
+                                    <label for="jogador">Nome do jogador:</label>
+                                    <input type="text" class="form-control" id="jogador" name="jogador" aria-describedby="jogadorHelp" placeholder="Digite nome do jogador">
+                                    <small id="jogadorHelp" class="form-text text-muted">Preencha apenas com o nome do jogador.</small>
                                 </div>
 
                                 <!-- CAMPO IMAGEM -->    
                                 <div class="form-group">
-                                    <label for="last_name">Imagem:</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" aria-describedby="lastNameHelp" placeholder="Faça o upload da imagem">
-                                    <small id="lastNameHelp" class="form-text text-muted">Faça somente o upload da imagem.</small>
+                                    <label for="imagem">Imagem:</label>
+                                    <input type="text" class="form-control" id="imagem" name="imagem" aria-describedby="imagemHelp" placeholder="Faça o upload da imagem">
+                                    <small id="imagemHelp" class="form-text text-muted">Faça somente o upload da imagem.</small>
                                 </div>
 
                                 <!-- CAMPO IDADE -->    
                                 <div class="form-group">
-                                    <label for="email">Coloque a idade do jogador:</label>
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite a idade do jogador">
-                                    <small id="emailHelp" class="form-text text-muted">Digite a idade.</small>
+                                    <label for="idade">Coloque a idade do jogador:</label>
+                                    <input type="idade" class="form-control" id="idade" name="idade" aria-describedby="idadelHelp" placeholder="Digite a idade do jogador">
+                                    <small id="idadeHelp" class="form-text text-muted">Digite a idade.</small>
                                 </div>
 
                                     <!-- Campo DESCRICAO -->
                                 <div class="form-group">
-                                    <label for="last_name">Digite a descrição do jogador:</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" aria-describedby="lastNameHelp" placeholder="Descrição">
-                                    <small id="lastNameHelp" class="form-text text-muted">Preencha apenas com  a descrição do jogador.</small>
+                                    <label for="descricao">Digite a descrição do jogador:</label>
+                                    <input type="text" class="form-control" id="descricao" name="descricao" aria-describedby="descricaoHelp" placeholder="Descrição">
+                                    <small id="descricaoHelp" class="form-text text-muted">Preencha apenas com  a descrição do jogador.</small>
                                 </div>
 
 
@@ -45,36 +45,19 @@
                                   <th scope="col">Imagem</th>
                                   <th scope="col">Idade</th>
                                   <th scope="col">Descrição</th>
+                                <th scope="col">Ação</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
                                   <th scope="row">1</th>
-                                  <td>Mark</td>
-                                  <td>Otto</td>
-                                  <td>@mdo</td>
-                                   <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Jacob</td>
-                                  <td>Thornton</td>
-                                  <td>@fat</td>
-                                  <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">3</th>
-                                  <td>Larry</td>
-                                  <td>the Bird</td>
-                                  <td>@twitter</td>
-                                  <td>@mdo</td>
-                                </tr>
-                                  <tr>
-                                  <th scope="row">4</th>
-                                  <td>nygy8g8</td>
-                                  <td>nbygd</td>
-                                  <td>rfbf7</td>
-                                  <td>@mdo</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                   <td></td>
+                                    <td><button type="button" class="btn btn-info">Deletar</button>
+                                        <button type="button" class="btn btn-info">Editar</button></td>
+                                  
                                 </tr>
                               </tbody>
                             </table>

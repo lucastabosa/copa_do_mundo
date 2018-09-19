@@ -2,9 +2,9 @@
           
                                 <!-- CAMPO nome do PAIS -->    
                                 <div class="form-group">
-                                    <label for="first_name">Nome do País:</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" placeholder="Digite o nome do país">
-                                    <small id="firstNameHelp" class="form-text text-muted">Preencha apenas com nome do País.</small>
+                                    <label for="pais">Nome do País:</label>
+                                    <input type="text" class="form-control" id="pais" name="pais" aria-describedby="paisHelp" placeholder="Digite o nome do país">
+                                    <small id="paisHelp" class="form-text text-muted">Preencha apenas com nome do País.</small>
                                   </div>
 
                                 <!-- CAMPO historia do PAIS  -->    
@@ -26,27 +26,16 @@
                                   <th scope="col">Id</th>
                                   <th scope="col">Nome</th>
                                   <th scope="col">História</th>
-                                  
+                                  <th scope="col">Ação</th> 
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
-                                  <th scope="row">1</th>
-                                  <td>Mark</td>
-                                  <td>Otto</td>
-                                  
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Jacob</td>
-                                  <td>Thornton</td>
-                                  
-                                </tr>
-                                <tr>
-                                  <th scope="row">3</th>
-                                  <td>Larry</td>
-                                  <td>the Bird</td>
-                                  
+                                    <th scope="row">1</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button type="button" class="btn btn-info">Deletar</button>
+                                        <button type="button" class="btn btn-info">Editar</button></td>
                                 </tr>
                               </tbody>
                             </table>

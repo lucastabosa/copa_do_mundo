@@ -1,24 +1,48 @@
-                          <form method="POST" action ="adm.php">
+                            <form method="POST" action ="adm.php">
                             
                                 <!-- CAMPO SELECAO -->    
                                 <div class="form-group">
-                                    <label for="first_name">Digite o nome da Seleção:</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" placeholder="Digite nome">
-                                    <small id="firstNameHelp" class="form-text text-muted">Preencha apenas com nome da seleção.</small>
+                                    <label for="selecao">Digite o nome da Seleção:</label>
+                                    <input type="text" class="form-control" id="selecao" name="selecao" aria-describedby="selecaoHelp" placeholder="Digite nome">
+                                    <small id="selecaoHelp" class="form-text text-muted">Preencha apenas com nome da seleção.</small>
                                 </div>
 
                                 <!-- CAMPO TITULO -->    
                                 <div class="form-group">
-                                    <label for="last_name">Título:</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" aria-describedby="lastNameHelp" placeholder="Digite o nome do título">
-                                    <small id="lastNameHelp" class="form-text text-muted">Preencha apenas com o nome do título.</small>
+                                    <label for="titulo">Título:</label>
+                                    <input type="text" class="form-control" id="titulo" name="titulo" aria-describedby="tituloHelp" placeholder="Digite o nome do título">
+                                    <small id="tituloHelp" class="form-text text-muted">Preencha apenas com o nome do título.</small>
                                 </div>
 
+                                <!-- CAMPO PAIS -->    
+                                <div class="form-group">
+                                    <label for="titulo">País:</label>
+                                    
+                                    <div class="input-group mb-3">
+                                      
+                                      <select class="custom-select" name="id_pais" id="id_paisHelp">
+                                        <?php  
+                                          $listadepaises = array();
+                                          $listadepaises[0] = array('id'=>1, 'nome'=>'Brasil');
+                                          $listadepaises[1] = array('id'=>2, 'nome'=>'França');
+                                          
+                                          
+                                          foreach( $listadepaises    as   $lp   ){     ?>
+                                          
+                                            <option value="<?php echo $lp['id']?>">    <?php echo $lp['nome']?></option>
+                                          
+                                         <?php  } ?> 
+                                      </select>
+                                    </div>
+                                    
+                                    <small id="id_paisHelp" class="form-text text-muted">Selecione um país.</small>
+                                </div>
+                                
                                 <!-- CAMPO DATA -->    
                                 <div class="form-group">
-                                    <label for="email">Data</label>
-                                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite a data do título ganho">
-                                    <small id="emailHelp" class="form-text text-muted">Digite a data.</small>
+                                    <label for="data">Data</label>
+                                    <input type="data" class="form-control" id="data" name="data" aria-describedby="dataHelp" placeholder="Digite a data do título ganho">
+                                    <small id="dataHelp" class="form-text text-muted">Digite a data.</small>
                                 </div>
 
                                 <div class="form-group form-check">
@@ -35,26 +59,17 @@
                                   <th scope="col">Nome</th>
                                   <th scope="col">título</th>
                                   <th scope="col">Data</th>
+                                  <th scope="col">Ação</th>   
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
                                   <th scope="row">1</th>
-                                  <td>Mark</td>
-                                  <td>Otto</td>
-                                  <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">2</th>
-                                  <td>Jacob</td>
-                                  <td>Thornton</td>
-                                  <td>@fat</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row">3</th>
-                                  <td>Larry</td>
-                                  <td>the Bird</td>
-                                  <td>@twitter</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td><button type="button" class="btn btn-info">Deletar</button>
+                                    <button type="button" class="btn btn-info">Editar</button></td>
                                 </tr>
                               </tbody>
                             </table>
