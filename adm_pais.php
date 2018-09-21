@@ -30,12 +30,27 @@
                                 </tr>
                               </thead>
                               <tbody>
+                                 <?php
+                              foreach($listadejogadores as $lj){              
+                            ?>
+                                  
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td></td>
-                                    <td></td>
+                                  <th scope="row">
+                                      <?php echo $lj['id']; ?>
+                                  </th>
+                                    
+                                  <td><?php echo $lj['Nome']; ?></td>
+                                
+                                  <td><?php echo $lj['História']; ?></td>
+                                    
+                                  <td><?php echo $lj['Ação']; ?></td>
+                                    
                                     <td><button type="button" class="btn btn-info">Deletar</button>
                                         <button type="button" class="btn btn-info">Editar</button></td>
+                                  
                                 </tr>
+                                  <?php
+                                    }
+                                  ?>
                               </tbody>
                             </table>
