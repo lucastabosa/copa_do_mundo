@@ -27,7 +27,7 @@ class ModelPais
         } 
     }
     public function listar(){
-        include 'db.php';
+        include 'dbpaises.php';
         
         $query = "SELECT id, nome, id_pais, titulo, data FROM selecao WHERE 1";
         
@@ -49,7 +49,7 @@ class ModelPais
     }
     
     public function editar(selecao $selecao){
-        include 'db.php';
+        include 'dbpaises.php';
         
         
         $query = "UPDATE selecao SET id=[value-1],nome=[value-2],id_pais=[value-3],titulo=[value-4],data=[value-5] WHERE 1";
@@ -75,7 +75,7 @@ class ModelPais
     }
     
     public function remover($id){
-        include 'db.php';
+        include 'dbpaises.php';
         
         $query = "DELETE FROM selecao WHERE 0";
         

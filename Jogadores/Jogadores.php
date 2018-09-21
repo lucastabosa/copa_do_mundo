@@ -1,5 +1,5 @@
 <?php 
-    class User{
+    class Jogadores {
         private $id;
         private $nome;
         private $id_selecao;
