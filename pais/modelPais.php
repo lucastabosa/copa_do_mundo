@@ -6,15 +6,15 @@ class ModelPais
         include 'dbpaises.php';
         
         
-        $query = " INSERT INTO pais(id, nome, historia) VALUES ([value-1],[value-2],[value-3])";
+        $query = " INSERT INTO pais( nome, historia) 
+        VALUES (:nome, :historia)";
       
         
         $statement= $connection->prepare($query);
         
         $valores = array();
-        $valores[':id'] = $user->getid();
-        $valores[':nome'] = $user->getnome();
-        $valores[':historia'] = $user->gethistoria();
+        $valores[':nome'] = $pais->getnome();
+        $valores[':historia'] = $pais->gethistoria();
         
         $result = $statement->execute($valores);
         
@@ -53,14 +53,14 @@ class ModelPais
         include 'dbpaises.php';
         
     
-        $query = "UPDATE pais SET id=[value-1],nome=[value-2],historia=[value-3] WHERE 1";
+        $query = "UPDATE pais SET nome=[:nome],historia=[:historia] WHERE id=:id";
       
         $statement= $connection->prepare($query);
         
         $valores = array();
-        $valores[':id'] = $user->getid();
-        $valores[':nome'] = $user->getnome();
-        $valores[':historia'] = $user->gethistoria();
+        $valores[':id'] = $pais->getid();
+        $valores[':nome'] = $pais->getnome();
+        $valores[':historia'] = $pais->gethistoria();
         
         
         $result = $statement->execute($valores);
@@ -76,7 +76,7 @@ class ModelPais
     public function remover($id){
         include 'dbpaises.php';
         
-        $query = "DELETE FROM pais WHERE 0";
+        $query = "DELETE FROM pais WHERE id=:id";
         
         $statement = $connection->prepare($query);
         

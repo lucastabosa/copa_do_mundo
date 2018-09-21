@@ -2,11 +2,10 @@
     include 'modelPais.php';
     if(isset ($_POST['cadastrar'])){
         $pais = new pais();
-        $senha_criptografada = password_hash($_POST['password'], PASSWORD_DEFAULT);
         
-        $user->setid($_POST['id']);
-        $user->setnome($_POST['nome']);
-        $user->sethistoria($_POST['historia']);
+        
+        $pais->setnome($_POST['nome']);
+        $pais->sethistoria($_POST['historia']);
         $modelo = new ModelPais();
         $modelo->adicionar($pais);
         

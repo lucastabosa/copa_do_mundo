@@ -49,11 +49,25 @@
                                 </tr>
                               </thead>
                               <tbody>
+                                <?php
+                                  foreach($listadevideos as $lv){              
+                                ?>
+                                  
                                 <tr>
-                                  <th scope="row">1</th>
-                                  <td></td>        
+                                  <th scope="row">
+                                      <?php echo $lv['id']; ?>
+                                  </th>
+                                    
+                                  <td><?php echo $lv['Referência']; ?></td>
+                                      
+                                  <td><?php echo $lv['Ação']; ?></td>
+                                    
                                   <td><button type="button" class="btn btn-info">Deletar</button>
-                                      <button type="button" class="btn btn-info">Editar</button></td>   
-                                </tr>    
+                                        <button type="button" class="btn btn-info">Editar</button></td>
+                                  
+                                </tr>
+                                  <?php
+                                    }
+                                  ?>
                               </tbody>
                             </table>

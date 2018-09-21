@@ -60,13 +60,27 @@
                                 </tr>
                               </thead>
                               <tbody>
+                                <?php
+                                  foreach($listadecuriosidades as $lc){              
+                                ?>
+                                  
                                 <tr>
-                                  <th scope="row">1</th>
-                                  <td></td>
-                                  <td></td>
+                                  <th scope="row">
+                                      <?php echo $lc['id']; ?>
+                                  </th>
+                                    
+                                  <td><?php echo $lc['Título']; ?></td>
+                                
+                                  <td><?php echo $lc['Descrição']; ?></td>
+                                      
+                                  <td><?php echo $lc['Ação']; ?></td>
+                                    
                                   <td><button type="button" class="btn btn-info">Deletar</button>
-                                    <button type="button" class="btn btn-info">Editar</button></td>
+                                        <button type="button" class="btn btn-info">Editar</button></td>
                                   
                                 </tr>
+                                  <?php
+                                    }
+                                  ?>
                               </tbody>
                             </table>

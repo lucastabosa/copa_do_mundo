@@ -63,13 +63,29 @@
                                 </tr>
                               </thead>
                               <tbody>
+                                <?php
+                                  foreach($listadeselecao as $ls){              
+                                ?>
+                                  
                                 <tr>
-                                  <th scope="row">1</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td><button type="button" class="btn btn-info">Deletar</button>
-                                    <button type="button" class="btn btn-info">Editar</button></td>
+                                  <th scope="row">
+                                      <?php echo $ls['id']; ?>
+                                  </th>
+                                    
+                                  <td><?php echo $ls['Nome']; ?></td>
+                                
+                                  <td><?php echo $ls['Título']; ?></td>
+                                    
+                                  <td><?php echo $ls['Data']; ?></td>
+                                    
+                                  <td><?php echo $ls['Ação']; ?></td>
+                                    
+                                    <td><button type="button" class="btn btn-info">Deletar</button>
+                                        <button type="button" class="btn btn-info">Editar</button></td>
+                                  
                                 </tr>
+                                  <?php
+                                    }
+                                  ?>
                               </tbody>
                             </table>
