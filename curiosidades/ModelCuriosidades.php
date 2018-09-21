@@ -1,24 +1,20 @@
 <?php
-include 'user.php';
-
-class ModelUser
+include 'curiosidades.php';
+class ModelPais
 {
-
-    public function adicionar(User $user){
-        include 'db.php';
+    public function adicionar(curiosidades $curiosidades){
+        include 'dbpaises.php';
         
         
-        $query = "INSERT INTO users(first_name, last_name, email, password, image) 
-            VALUES (:first_name, :last_name, :email, :password, :image)";
+        $query = "INSERT INTO curiosidades(id, titulo, descricao, id_selecao) VALUES ([value-1],[value-2],[value-3],[value-4])";
         
         $statement= $connection->prepare($query);
         
         $valores = array();
-        $valores[':first_name'] = $user->getFirstName();
-        $valores[':last_name'] = $user->getLastName();
-        $valores[':email'] = $user->getEmail();
-        $valores[':password'] = $user->getPassword();
-        $valores[':image'] = $user->getImage();
+        $valores[':id'] = $user->getid();
+        $valores[':titulo'] = $user->gettitulo();
+        $valores[':descricao'] = $user->getdescricao();
+        $valores[':id_selecao'] = $user->getid_selecao();
         
         $result = $statement->execute($valores);
         
@@ -29,11 +25,10 @@ class ModelUser
             echo "Inserir usuário deu certo.";
         } 
     }
-
     public function listar(){
-        include 'db.php';
+        include 'dbpaises.php';
         
-        $query = "SELECT id, first_name, last_name, email, image FROM users";
+        $query = "SELECT id, titulo, descricao, id_selecao FROM curiosidades WHERE 1";
         
         $statement = $connection->prepare($query);
         
@@ -43,31 +38,29 @@ class ModelUser
         //junta todos os usuarios retornados em um array de array usuario
         //pro exemplo o 
         $u = $result[0];//pega primeiro usuario
-        echo $u['first_name'];
+        //echo $u['first_name'];
         $u = $result[1];
-        echo $u['first_name'];//pega segundo usuario
+        //echo $u['first_name'];//pega segundo usuario
         
         $result = $statement->fetchAll();
         
         return $result;
     }
-
     
-    public function editar(User $user){
-        include 'db.php';
+    public function editar(curiosidades $curiosidade){
+        include 'dbpaises.php';
         
         
-        $query = "UPDATE users SET first_name = :first_name, last_name = :last_name, email=:email, password=:password, image=:image WHERE id = :id";
+        $query = "UPDATE curiosidades SET id=[value-1],titulo=[value-2],descricao=[value-3],id_selecao=[value-4] WHERE 1";
         
         $statement= $connection->prepare($query);
         
         $valores = array();
-        $valores[':first_name'] = $user->getFirstName();
-        $valores[':last_name'] = $user->getLastName();
-        $valores[':email'] = $user->getEmail();
-        $valores[':password'] = $user->getPassword();
-        $valores[':image'] = $user->getImage();
-        $valores[':id'] = $user->getId();
+        $valores[':id'] = $user->getid();
+        $valores[':titulo'] = $user->gettitulo();
+        $valores[':descricao'] = $user->getdescricao();
+          $valores[':id_selecao'] = $user->getid_selecao();
+        
         
         $result = $statement->execute($valores);
         
@@ -80,9 +73,9 @@ class ModelUser
     }
     
     public function remover($id){
-        include 'db.php';
+        include 'dbpaises.php';
         
-        $query = "DELETE FROM users WHERE id = :id";
+        $query = "DELETE FROM curiosidades WHERE 0";
         
         $statement = $connection->prepare($query);
         
@@ -102,5 +95,4 @@ class ModelUser
         
     }
 }
-
 ?>

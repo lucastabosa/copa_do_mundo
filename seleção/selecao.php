@@ -1,5 +1,5 @@
 <?php 
-    class selecao{
+    class Selecao{
         private $id;
         private $nome;
         private $id_pais;

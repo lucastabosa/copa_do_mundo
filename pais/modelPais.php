@@ -26,7 +26,7 @@ class ModelPais
         } 
     }
     public function listar(){
-        include 'db.php';
+        include 'dbpaises.php';
         
         $query = "  SELECT * FROM pais WHERE 1
        ";
@@ -39,9 +39,9 @@ class ModelPais
         
         //junta todos os usuarios retornados em um array de array usuario
         //pro exemplo o 
-        $u = $result[0];//pega primeiro usuario
+       // $u = $result[0];//pega primeiro usuario
         //echo $u['first_name'];
-        $u = $result[1];
+        //$u = $result[1];
         //echo $u['first_name'];//pega segundo usuario
         
         $result = $statement->fetchAll();
@@ -50,7 +50,7 @@ class ModelPais
     }
     
     public function editar(pais $pais){
-        include 'db.php';
+        include 'dbpaises.php';
         
     
         $query = "UPDATE pais SET id=[value-1],nome=[value-2],historia=[value-3] WHERE 1";
@@ -74,7 +74,7 @@ class ModelPais
     }
     
     public function remover($id){
-        include 'db.php';
+        include 'dbpaises.php';
         
         $query = "DELETE FROM pais WHERE 0";
         

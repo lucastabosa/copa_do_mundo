@@ -1,5 +1,5 @@
 <?php 
-    class User{
+    class ComidasTipicas{
         private $id;
         private $nome;
         private $regiao;
