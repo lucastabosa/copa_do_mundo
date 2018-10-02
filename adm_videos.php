@@ -1,4 +1,8 @@
-                           <form method="POST" action ="adm.php">
+<?php
+     include 'videos/controllerVideos.php'; ?>
+               
+
+<form method="POST" action ="adm.php">
                                
                                
                                <!-- CAMPO SELECAO -->    
@@ -58,9 +62,7 @@
                                       <?php echo $lv['id']; ?>
                                   </th>
                                     
-                                  <td><?php echo $lv['Referência']; ?></td>
-                                      
-                                  <td><?php echo $lv['Ação']; ?></td>
+                                  <td><?php echo $lv['referencia']; ?></td>
                                     
                                   <td><button type="button" class="btn btn-info">Deletar</button>
                                         <button type="button" class="btn btn-info">Editar</button></td>

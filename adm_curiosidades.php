@@ -1,4 +1,8 @@
-                            <form method="POST" action ="adm.php">
+<?php
+     include 'curiosidades/controllerCuriosidades.php'; ?>
+
+
+<form method="POST" action ="adm.php">
                             
                                 <!-- CAMPO CURIOSIDADES -->    
                                 <div class="form-group">
@@ -69,11 +73,9 @@
                                       <?php echo $lc['id']; ?>
                                   </th>
                                     
-                                  <td><?php echo $lc['Título']; ?></td>
+                                  <td><?php echo $lc['titulo']; ?></td>
                                 
-                                  <td><?php echo $lc['Descrição']; ?></td>
-                                      
-                                  <td><?php echo $lc['Ação']; ?></td>
+                                  <td><?php echo $lc['descricao']; ?></td>
                                     
                                   <td><button type="button" class="btn btn-info">Deletar</button>
                                         <button type="button" class="btn btn-info">Editar</button></td>

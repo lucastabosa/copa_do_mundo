@@ -1,5 +1,5 @@
 <?php 
-    include 'modelSelecao.php';
+    include_once 'modelSelecao.php';
     if(isset ($_POST['cadastrar'])){
         $selecao = new Selecao();
         
@@ -38,4 +38,7 @@
      $modelo->remover($selecao);
 
  }
+
+$listaselecao=array();
+$listadepais=array();
 ?>

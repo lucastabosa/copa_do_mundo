@@ -42,11 +42,10 @@
                                       <?php echo $lp['id']; ?>
                                   </th>
                                     
-                                  <td><?php echo $lp['Nome']; ?></td>
+                                  <td><?php echo $lp['nome']; ?></td>
                                 
-                                  <td><?php echo $lp['História']; ?></td>
+                                  <td><?php echo $lp['historia']; ?></td>
                                     
-                                  <td><?php echo $lp['Ação']; ?></td>
                                     
                                     <td><button type="button" class="btn btn-info">Deletar</button>
                                         <button type="button" class="btn btn-info">Editar</button></td>

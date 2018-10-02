@@ -1,5 +1,5 @@
 <?php 
-    include 'modelPais.php';
+    include_once 'modelPais.php';
     if(isset ($_POST['cadastrar'])){
         $pais = new pais();
         
@@ -34,6 +34,6 @@
      $modelo->remover($pais);
 
  }
-
-
+$modelo = new ModelPais();
+$listadepais= $modelo->listar();
 ?>

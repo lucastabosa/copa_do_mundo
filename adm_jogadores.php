@@ -1,4 +1,7 @@
-                            <form method="POST" action ="adm.php" enctype="multipart/form-data">
+<?php
+      include 'jogadores/controllerJogadores.php'; ?>
+
+<form method="POST" action ="adm.php" enctype="multipart/form-data">
                             
                                 <!-- CAMPO JOGADORES -->    
                                 <div class="form-group">

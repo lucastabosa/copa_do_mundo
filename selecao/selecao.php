@@ -53,7 +53,7 @@
              $this->data = $a;
         }
         
-        // public function setImage($a){
+        public function setImage($a){
              $this->image = $a;
         }
     }

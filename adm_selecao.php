@@ -1,4 +1,7 @@
-                            <form method="POST" action ="adm.php">
+<?php
+     include 'selecao/controllerSelecao.php'; ?>
+
+<form method="POST" action ="adm.php">
                             
                                 <!-- CAMPO SELECAO -->    
                                 <div class="form-group">
@@ -22,11 +25,7 @@
                                       
                                       <select class="custom-select" name="id_pais" id="id_paisHelp">
                                         <?php  
-                                          $listadepaises = array();
-                                          $listadepaises[0] = array('id'=>1, 'nome'=>'Brasil');
-                                          $listadepaises[1] = array('id'=>2, 'nome'=>'França');
-                                          
-                                          
+                                         
                                           foreach( $listadepaises    as   $lp   ){     ?>
                                           
                                             <option value="<?php echo $lp['id']?>">    <?php echo $lp['nome']?></option>
@@ -72,13 +71,12 @@
                                       <?php echo $ls['id']; ?>
                                   </th>
                                     
-                                  <td><?php echo $ls['Nome']; ?></td>
+                                  <td><?php echo $ls['nome']; ?></td>
                                 
-                                  <td><?php echo $ls['Título']; ?></td>
+                                  <td><?php echo $ls['titulo']; ?></td>
                                     
-                                  <td><?php echo $ls['Data']; ?></td>
-                                    
-                                  <td><?php echo $ls['Ação']; ?></td>
+                                  <td><?php echo $ls['data']; ?></td>
+                                  
                                     
                                     <td><button type="button" class="btn btn-info">Deletar</button>
                                         <button type="button" class="btn btn-info">Editar</button></td>

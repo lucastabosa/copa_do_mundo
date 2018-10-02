@@ -1,12 +1,12 @@
 <?php
 include 'selecao.php';
-class ModelPais
+class ModelSelecao
 {
     public function adicionar(selecao $selecao){
         include 'dbpaises.php';
         
         
-        $query = "INSERT INTO selecao(id, nome, id_pais, titulo, data) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5])";
+        $query = "INSERT INTO selecao(id, nome, id_pais, titulo, data) VALUES ([valuemue-5])";
         
         $statement= $connection->prepare($query);
         

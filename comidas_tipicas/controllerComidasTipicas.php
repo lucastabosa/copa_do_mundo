@@ -2,7 +2,7 @@
     include 'modelComidasTipicas.php';
     if(isset ($_POST['cadastrar'])){
         $user = new User();
-        $senha_criptografada = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        
         
         $user->setid($_POST['id']);
         $user->setnome($_POST['nome']);
@@ -13,4 +13,30 @@
         $modelo->adicionar($user);
         
     }
+if (isset($_POST['editar'])) {
+     
+     $modelo = new ModelcomidasTipicas();
+     
+     $ComidasTipicas = new ComidasTipicas();
+     $ComidasTipicas->setid($_POST['id']);
+     $ComidasTipicas->setnome($_POST['nome']);
+     $ComidasTipicas->setid_pais($_POST['id_pais']);
+       $ComidasTipicas->settitulo($_POST['titulo']);
+       $ComidasTipicas->setdata($_POST['data']);
+     
+     $modelo->editar($ComidasTipicas);
+     
+ }
+
+ if (isset($_POST['remover'])) {
+   
+      $modelo = new ModelComidasTipicas();
+     
+     $ComidasTipicas = new ComidasTipicas();
+     $ComidasTipicas->setid($_POST['id']);
+     
+     $modelo->remover($ComidasTipicas);
+
+ }
+
 ?>

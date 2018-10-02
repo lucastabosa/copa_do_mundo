@@ -1,4 +1,9 @@
-                            <form method="POST" action ="adm.php">
+<?php
+     include 'comidastipicas/controllerComidasTipicas.php'; ?>
+     
+                    
+
+<form method="POST" action ="adm.php">
                             
                                 <!-- CAMPO COMIDATIPICA -->    
                                 <div class="form-group">
@@ -42,11 +47,9 @@
                                       <?php echo $lct['id']; ?>
                                   </th>
                                     
-                                  <td><?php echo $lct['Comida']; ?></td>
+                                  <td><?php echo $lct['comida']; ?></td>
                                 
-                                  <td><?php echo $lct['Região']; ?></td>
-                                      
-                                  <td><?php echo $lct['Ação']; ?></td>
+                                  <td><?php echo $lct['regiao']; ?></td>
                                     
                                   <td><button type="button" class="btn btn-info">Deletar</button>
                                         <button type="button" class="btn btn-info">Editar</button></td>
