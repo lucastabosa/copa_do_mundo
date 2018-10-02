@@ -6,7 +6,11 @@ class ModelSelecao
         include 'dbpaises.php';
         
         
+<<<<<<< HEAD:selecao/modelSelecao.php
         $query = "INSERT INTO selecao(id, nome, id_pais, titulo, data) VALUES ([valuemue-5])";
+=======
+        $query = "INSERT INTO selecao(nome, id_pais, titulo, data) VALUES ()";
+>>>>>>> 327db56b37b6ce0f519642cf1dafdc87d409956d:seleção/modelSelecao.php
         
         $statement= $connection->prepare($query);
         
