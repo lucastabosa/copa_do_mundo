@@ -6,7 +6,7 @@ class ModelPais
         include 'dbpaises.php';
         
         
-        $query = "INSERT INTO selecao(id, nome, id_pais, titulo, data) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5])";
+        $query = "INSERT INTO selecao(nome, id_pais, titulo, data) VALUES ()";
         
         $statement= $connection->prepare($query);
         

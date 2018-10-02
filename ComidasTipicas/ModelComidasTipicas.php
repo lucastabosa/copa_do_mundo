@@ -6,7 +6,8 @@ class ModelPais
         include 'dbpaises.php';
         
         
-        $query = "INSERT INTO comidas tipicas(id, nome, regiao) VALUES ([value-1],[value-2],[value-3])";
+        $query = "INSERT INTO comidas tipicas(id, nome, regiao) VALUES (:id,:nome,:regiao)";
+        
         
         $statement= $connection->prepare($query);
         
@@ -36,9 +37,9 @@ class ModelPais
         
         //junta todos os usuarios retornados em um array de array usuario
         //pro exemplo o 
-        $u = $result[0];//pega primeiro usuario
+        //$u = $result[0];//pega primeiro usuario
         //echo $u['first_name'];
-        $u = $result[1];
+        //$u = $result[1];
         //echo $u['first_name'];//pega segundo usuario
         
         $result = $statement->fetchAll();
@@ -50,7 +51,7 @@ class ModelPais
         include 'dbpaises.php';
         
         
-        $query = "UPDATE comidas tipicas SET id=[value-1],nome=[value-2],regiao=[value-3] WHERE 1";
+        $query = "UPDATE comidas tipicas SET nome = :nome, regiao = :regiao WHERE id = :id";
         
         $statement= $connection->prepare($query);
         
@@ -73,7 +74,7 @@ class ModelPais
     public function remover($id){
         include 'dbpaises.php';
         
-        $query = "DELETE FROM comidas tipicas WHERE 0";
+        $query = "DELETE FROM comidas tipicas WHERE id = :id";
         
         $statement = $connection->prepare($query);
         
