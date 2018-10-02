@@ -33,13 +33,27 @@
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr>
-                                  <th scope="row">1</th>
-                                  <td></td>
-                                  <td></td>
-                                  <td><button type="button" class="btn btn-info">Deletar</button>
-                                    <button type="button" class="btn btn-info">Editar</button></td>
+                                 <?php
+                                  foreach($listadecomidastipicas as $lct){              
+                                ?>
                                   
-                                </tr>  
+                                <tr>
+                                  <th scope="row">
+                                      <?php echo $lct['id']; ?>
+                                  </th>
+                                    
+                                  <td><?php echo $lct['Comida']; ?></td>
+                                
+                                  <td><?php echo $lct['Região']; ?></td>
+                                      
+                                  <td><?php echo $lct['Ação']; ?></td>
+                                    
+                                  <td><button type="button" class="btn btn-info">Deletar</button>
+                                        <button type="button" class="btn btn-info">Editar</button></td>
+                                  
+                                </tr>
+                                  <?php
+                                    }
+                                  ?>
                               </tbody>
                             </table>

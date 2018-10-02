@@ -1,4 +1,4 @@
-                            <form method="POST" action ="adm.php">
+                            <form method="POST" action ="adm.php" enctype="multipart/form-data">
                             
                                 <!-- CAMPO JOGADORES -->    
                                 <div class="form-group">
@@ -34,7 +34,7 @@
                                 <!-- CAMPO IMAGEM -->    
                                 <div class="form-group">
                                     <label for="imagem">Imagem:</label>
-                                    <input type="text" class="form-control" id="imagem" name="imagem" aria-describedby="imagemHelp" placeholder="Faça o upload da imagem">
+                                    <input type="file" name ="file" aria-describedby="imagemHelp" class="form-control">
                                     <small id="imagemHelp" class="form-text text-muted">Faça somente o upload da imagem.</small>
                                 </div>
 
