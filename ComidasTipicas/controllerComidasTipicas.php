@@ -1,12 +1,12 @@
 <?php 
     include 'modelComidasTipicas.php';
-    if(isset ($_POST['cadastrar'])){
+    if(isset ($_POST['cadastrar_comidatipica'])){
         $ComidasTipicas = new ComidasTipicas();
        
         
-        $user->setid($_POST['id']);
-        $user->setnome($_POST['nome']);
-        $user->setregiao($_POST['regiao']);
+        $ComidasTipicas->setid($_POST['id']);
+        $ComidasTipicas->setnome($_POST['nome']);
+        $ComidasTipicas->setregiao($_POST['regiao']);
        
         
         $modelo = new ModelComidasTipicas();
@@ -38,4 +38,7 @@
      $modelo->remover($ComidasTipicas);
 
  }
+
+$listadecomidastipicas=array();
+
 ?>

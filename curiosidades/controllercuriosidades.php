@@ -1,13 +1,13 @@
 <?php 
     include 'modelcuriosidades.php';
-    if(isset ($_POST['cadastrar'])){
+    if(isset ($_POST['cadastrar_curiosidades'])){
         $curiosidades = new Curiosidades();
         
         
-        $user->setid($_POST['id']);
-        $user->settitulo($_POST['titulo']);
-        $user->setdescricao($_POST['descricao']);
-        $user->setid_selecao($_POST['id_selecao']);
+        $curiosidades->setid($_POST['id']);
+        $curiosidades->settitulo($_POST['titulo']);
+        $curiosidades->setdescricao($_POST['descricao']);
+        $curiosidades->setid_selecao($_POST['id_selecao']);
        
         
         $modelo = new ModelCuriosidades();
@@ -40,4 +40,6 @@ if (isset($_POST['editar'])) {
 
  }
 
+$listadecuriosidades=array();
+$listadeselecao=array();
 ?>

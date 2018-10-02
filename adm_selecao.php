@@ -26,7 +26,7 @@
                                       <select class="custom-select" name="id_pais" id="id_paisHelp">
                                         <?php  
                                          
-                                          foreach( $listadepaises    as   $lp   ){     ?>
+                                          foreach( $listadepais    as   $lp   ){     ?>
                                           
                                             <option value="<?php echo $lp['id']?>">    <?php echo $lp['nome']?></option>
                                           
@@ -49,7 +49,7 @@
                                     <label class="form-check-label" for="exampleCheck1">Não sou robô</label>
                                 </div>
 
-                                  <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>
+                                  <button type="submit" class="btn btn-danger" name="cadastrar_selecao" >Cadastrar</button>
                             </form>
                                 <table class="table">
                               <thead class="thead-dark">

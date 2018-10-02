@@ -1,20 +1,20 @@
 <?php
-include 'pais.php';
-class ModelPais
+include 'videos.php';
+class ModelVideos 
 {
-    public function adicionar(pais $pais){
+    public function adicionar(videos $videos){
         include 'dbpaises.php';
         
         
-        $query = " INSERT INTO pais( nome, historia) 
-        VALUES (:nome, :historia)";
-      
-        
+        $query = "INSERT INTO jogadores(id, id_selecao, referencia) VALUES (:id,:id_selecao,:referencia)";
+         
         $statement= $connection->prepare($query);
         
         $valores = array();
-        $valores[':nome'] = $pais->getnome();
-        $valores[':historia'] = $pais->gethistoria();
+        $valores[':id'] = $user->getid();
+        $valores[':id_selecao'] = $user->getid_selecao();
+        $valores[':referencia'] = $user->getreferencia();
+        
         
         $result = $statement->execute($valores);
         
@@ -28,9 +28,8 @@ class ModelPais
     public function listar(){
         include 'dbpaises.php';
         
-        $query = " SELECT id, nome, historia FROM pais
-       ";
-       
+        $query = "SELECT id, id_selecao, referencia  FROM videos WHERE 1";
+        
         
         $statement = $connection->prepare($query);
         
@@ -39,7 +38,7 @@ class ModelPais
         
         //junta todos os usuarios retornados em um array de array usuario
         //pro exemplo o 
-       // $u = $result[0];//pega primeiro usuario
+        //$u = $result[0];//pega primeiro usuario
         //echo $u['first_name'];
         //$u = $result[1];
         //echo $u['first_name'];//pega segundo usuario
@@ -49,18 +48,18 @@ class ModelPais
         return $result;
     }
     
-    public function editar(pais $pais){
+    public function editar(videos $videos){
         include 'dbpaises.php';
         
-    
-        $query = "UPDATE pais SET nome=[:nome],historia=[:historia] WHERE id=:id";
-      
+        
+        $query = "UPDATE videos SET  id_selecao = :id_selecao , referencia = :referencia WHERE id = :id";
+        
         $statement= $connection->prepare($query);
         
         $valores = array();
-        $valores[':id'] = $pais->getid();
-        $valores[':nome'] = $pais->getnome();
-        $valores[':historia'] = $pais->gethistoria();
+        $valores[':id'] = $user->getid();
+        $valores[':id_selecao'] = $user->getid_selecao();
+        $valores[':referencia'] = $user->getreferencia();
         
         
         $result = $statement->execute($valores);
@@ -76,7 +75,7 @@ class ModelPais
     public function remover($id){
         include 'dbpaises.php';
         
-        $query = "DELETE FROM pais WHERE id=:id";
+        $query = "DELETE FROM videos WHERE id = :id";
         
         $statement = $connection->prepare($query);
         

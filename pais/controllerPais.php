@@ -1,6 +1,6 @@
 <?php 
     include_once 'modelPais.php';
-    if(isset ($_POST['cadastrar'])){
+    if(isset ($_POST['cadastrar_pais'])){
         $pais = new pais();
         
         

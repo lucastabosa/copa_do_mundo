@@ -6,13 +6,13 @@
 	<head>
             <meta charset="UTF-8">
     
-        <link href="meusite/css/bootstrap.min.css" rel="stylesheet" >
+        <link href="css/bootstrap.min.css" rel="stylesheet" >
         
         
-        <link href="meusite/css/meuestilo.css" rel="stylesheet">
+        <link href="css/meuestilo.css" rel="stylesheet">
         
-        <script type="text/javascript" src="meusite/js/jquery-min.js"></script>
-        <script type="text/javascript" src="meusite/js/bootstrap.js">
+        <script type="text/javascript" src="js/jquery-min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js">
         </script>
     </head>
 	<body>

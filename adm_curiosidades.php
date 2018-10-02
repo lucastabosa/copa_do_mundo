@@ -47,7 +47,7 @@
                                     <small id="id_selecaoHelp" class="form-text text-muted">Selecione uma seleção.</small>
                                 </div>
                                 
-                                  <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>
+                                  <button type="submit" class="btn btn-danger" name="cadastrar_curiosidades" >Cadastrar</button>
                             </form>
 
 

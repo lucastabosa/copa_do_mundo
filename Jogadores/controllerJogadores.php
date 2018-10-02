@@ -1,15 +1,15 @@
 <?php 
     include 'modelJogadores.php';
-    if(isset ($_POST['cadastrar'])){
+    if(isset ($_POST['cadastrar_jogadores'])){
         $jogadores = new Jogadores();
         
         
-        $user->setid($_POST['id']);
-        $user->setnome($_POST['nome']);
-        $user->setid_selecao($_POST['id_selecao']);
-        $user->setfoto('foto');
-        $user->setidade($_POST['idade']);
-        $user->setdescricao($_POST['descricao']);
+        $jogadores->setid($_POST['id']);
+        $jogadores->setnome($_POST['nome']);
+        $jogadores->setid_selecao($_POST['id_selecao']);
+        $jogadores->setfoto('foto');
+        $jogadores->setidade($_POST['idade']);
+        $jogadores->setdescricao($_POST['descricao']);
         
         $modelo = new ModelJogadores();
         $modelo->adicionar($jogadores);
@@ -26,7 +26,7 @@
      $jogadores->setid_selecao($_POST['id_selecao']);
        $jogadores->setfoto($_POST['foto']);
        $jogadores->setidade($_POST['idade']);
-     $jogadores->setdesricao($_POST['descricao'])
+     $jogadores->setdesricao($_POST['descricao']);
          
      $modelo->editar($jogadores);
      
@@ -43,6 +43,8 @@
 
  }
 
-$listadepais=array();
+$listadejogadores=array();
+$listadeselecao=array();
+
 
 ?>

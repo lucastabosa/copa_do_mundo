@@ -21,7 +21,7 @@
                                     <label class="form-check-label" for="exampleCheck1">Não sou robô</label>
                                   </div>
 
-                                  <button type="submit" class="btn btn-danger" name="cadastrar" >Cadastrar</button>
+                                  <button type="submit" class="btn btn-danger" name="cadastrar_pais" >Cadastrar</button>
                             </form>
                             <table class="table">
                               <thead class="thead-dark">

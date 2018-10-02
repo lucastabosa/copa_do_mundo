@@ -1,6 +1,6 @@
 <?php
 include 'ComidasTipicas.php';
-class ModelPais
+class ModelComidasTipicas
 {
     public function adicionar(comidasTipicas $comidasTipicas){
         include 'dbpaises.php';

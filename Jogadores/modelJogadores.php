@@ -1,6 +1,6 @@
 <?php
 include 'Jogadores.php';
-class ModelPais
+class ModelJogadores 
 {
     public function adicionar(jogadores $jogadores){
         include 'dbpaises.php';

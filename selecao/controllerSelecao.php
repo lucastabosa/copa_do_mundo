@@ -1,12 +1,13 @@
 <?php 
     include_once 'modelSelecao.php';
-    if(isset ($_POST['cadastrar'])){
+    include_once 'pais/modelPais.php';
+    if(isset ($_POST['cadastrar_selecao'])){
         $selecao = new Selecao();
         
-        $user->setnome($_POST['nome']);
-        $user->setid_pais($_POST['id_pais']);
-        $user->settitulo($_POST['titulo']);
-        $user->setdata($_POST['data']);
+        $selecao->setnome($_POST['nome']);
+        $selecao->setid_pais($_POST['id_pais']);
+        $selecao->settitulo($_POST['titulo']);
+        $selecao->setdata($_POST['data']);
         
         $modelo = new ModelSelecao();
         $modelo->adicionar($selecao);
@@ -38,7 +39,9 @@
      $modelo->remover($selecao);
 
  }
+   
+$modelo = new ModelPais();
 
-$listaselecao=array();
-$listadepais=array();
+$listadeselecao=array();
+$listadepais=$modelo->listar();
 ?>

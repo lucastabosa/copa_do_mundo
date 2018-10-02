@@ -6,11 +6,8 @@ class ModelSelecao
         include 'dbpaises.php';
         
         
-<<<<<<< HEAD:selecao/modelSelecao.php
-        $query = "INSERT INTO selecao(id, nome, id_pais, titulo, data) VALUES ([valuemue-5])";
-=======
-        $query = "INSERT INTO selecao(nome, id_pais, titulo, data) VALUES ()";
->>>>>>> 327db56b37b6ce0f519642cf1dafdc87d409956d:seleção/modelSelecao.php
+         $query = "INSERT INTO selecao(nome, id_pais, titulo, data) VALUES (:nome, :titulo, :data)";
+
         
         $statement= $connection->prepare($query);
         
@@ -56,7 +53,7 @@ class ModelSelecao
         include 'dbpaises.php';
         
         
-        $query = "UPDATE selecao SET id=[value-1],nome=[value-2],id_pais=[value-3],titulo=[value-4],data=[value-5] WHERE 1";
+        $query = "UPDATE selecao SET nome=[:nome],titulo=[:titulo],data=[:data] WHERE 1";
         
         $statement= $connection->prepare($query);
         

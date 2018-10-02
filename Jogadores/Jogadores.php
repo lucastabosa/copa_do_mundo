@@ -59,5 +59,6 @@
         public function setdescricao($a){
              $this->descricao = $a;
     }
+}
 
 ?>
